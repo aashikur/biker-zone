@@ -12,10 +12,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome  -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
+
+        body,
+        .poppins-thin {
+            font-family: "Poppins", serif;
+        }
+    </style>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- <style type="text/tailwindcss">
+        @theme {
+        --color-bike-primary: #E76F51;
+      }
+    </style>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                bike-primary: '#E76F51';
+              }
+            }
+          }
+        }
+      </script> -->
     <title>Biker Zone</title>
 </head>
 
-<body class="bg-teal-200 h-100vh">
+<body class="">
+    <!-- Header Element  -->
+    <header class="container mx-auto px-4 md:px-0">
+        <!-- navbar  -->
+        <div class="navbar px-0 py-4">
+            <!-- Site Logo  -->
+            <div class="flex-1">
+                <a class="font-bold cursor-pointer text-xl text-[#E76F51]">BikerZone</a>
+            </div>
+           <!-- Desktop Menu  -->
+            <div class=" hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>News</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <!-- Login Btn  -->
+            <div class="hidden lg:inline-flex">
+                <a class="btn text-white bg-[#E76F51] hover:text-[#E76F51] hover:border-[#E76F51] hover:bg-transparent px-10">Login</a>
+            </div>
+            <!-- Mobile dropdown Menu box -->
+            <div class="lg:hidden">
+                <div class="dropdown  dropdown-end">
+                    <!-- Burger icon -->
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#E76F51]" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-32 p-2 shadow">
+                        <li><a>Home</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>News</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Carousel  -->
+        <div class="carousel w-full">
+            <!-- 1st  -->
+            <div id="slide1" class="carousel-item relative w-full">
+                <div class="hero bg-[#fdf0ed] rounded-sm p-5 md:p-16">
+                    <div class="hero-content flex-col lg:flex-row justify-between">
+                      <div class="lg:w-1/2">
+                        <h1 class="text-5xl font-bold">Ride-on R15 V4 with Smile</h1>
+                        <p class="py-6 opacity-60">Amet minim mollit non deserunt ullamco 
+                            est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                        </p>
+                        <button class="btn bg-[#e76f51] text-white">Get Started</button>
+                      </div>
+                      <img  src="img/slider/bike1.png" class="max-w-sm rounded-lg" />
+                    </div>
+                  </div>
+              <div class="absolute left-5 right-5 bottom-0 md:bottom-auto md:top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide3" class="btn btn-circle">❮</a>
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <!-- 2st  -->
+            <div id="slide2" class="carousel-item relative w-full">
+                <div class="hero bg-[#fdf0ed] rounded-sm p-5 md:p-16">
+                    <div class="hero-content flex-col lg:flex-row justify-between">
+                      <div class="lg:w-1/2">
+                        <h1 class="text-5xl font-bold">Ride-on R15 V4 with Smile</h1>
+                        <p class="py-6 opacity-60">Amet minim mollit non deserunt ullamco 
+                            est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                        </p>
+                        <button class="btn bg-[#e76f51] text-white">Get Started</button>
+                      </div>
+                      <img  src="img/slider/bike2.png" class="max-w-sm rounded-lg" />
+                    </div>
+                  </div>
+              <div class="absolute left-5 right-5 bottom-0 md:bottom-auto md:top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide1" class="btn btn-circle">❮</a>
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+            <!-- 3st  -->
+            <div id="slide3" class="carousel-item relative w-full">
+                <div class="hero bg-[#fdf0ed] rounded-sm p-5 md:p-16">
+                    <div class="hero-content flex-col lg:flex-row justify-between">
+                      <div class="lg:w-1/2">
+                        <h1 class="text-5xl font-bold">Ride-on R15 V4 with Smile</h1>
+                        <p class="py-6 opacity-60">Amet minim mollit non deserunt ullamco 
+                            est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                        </p>
+                        <button class="btn bg-[#e76f51] text-white">Get Started</button>
+                      </div>
+                      <img  src="img/slider/bike3.png" class="max-w-sm rounded-lg" />
+                    </div>
+                  </div>
+              <div class="absolute left-5 right-5 bottom-0 md:bottom-auto md:top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide2" class="btn btn-circle">❮</a>
+                <a href="#slide1" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+
+
+          </div>
+    </header>
 
 
 
@@ -30,16 +162,12 @@
 
 
 
-
-
-
-
-    
     <!-- ================================================================= -->
-    <!-- Tailwind CSS CDN  -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <!-- DaisyUI  -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS CDN  -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
 </body>
 
 </html>
